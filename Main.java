@@ -5,7 +5,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Aquí se puede reemplazar RadioImp1 con otras implementaciones.
-        Radio radio = new RadioImp1();
+        //Radio radio = new RadioImp1();
+        Radio radio = new RadioImp2();
 
         boolean isRadioOn = false;
 

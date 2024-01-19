@@ -2,7 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class RadioImpl1Test {
+public class RadioImp1Test {
     private RadioImp1 radio;
 
     @Before
