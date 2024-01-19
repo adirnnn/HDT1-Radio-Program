@@ -101,4 +101,25 @@ public class RadioImp1 implements Radio {
         System.out.println("Volume decreased to " + volume);
         // Mensaje indicando el nuevo nivel de volumen después de disminuir
     }
+
+    // Getter methods for testing
+    public boolean isOn() {
+        return isOn;
+    }
+
+    public boolean isAM() {
+        return isAM;
+    }
+
+    public double getCurrentStation() {
+        return currentStation;
+    }
+
+    public double[] getPresets() {
+        return presets;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
 }

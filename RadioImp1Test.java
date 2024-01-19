@@ -41,14 +41,22 @@ public class RadioImpl1Test {
 
     @Test
     public void testTuneDown() {
+        boolean isAm = radio.isAM();
         double initialStation = radio.getCurrentStation();
+        double newValue = 0.0;
         radio.tuneDown();
-        assertTrue(radio.getCurrentStation() < initialStation);
+        if (isAm) {
+            newValue = Math.max(530.0, initialStation - 10.0);
+        } else {
+            newValue = Math.max(87.9, initialStation - 0.2);
+        }
+    
+        assertEquals(newValue, radio.getCurrentStation(), 0.01);
     }
 
     @Test
     public void testSaveStation() {
-        double station = 700.0;
+        double station = 530.0;
         int button = 3;
         radio.saveStation(button);
         assertEquals(station, radio.getPresets()[button - 1], 0.01);
@@ -56,7 +64,7 @@ public class RadioImpl1Test {
 
     @Test
     public void testSelectStation() {
-        double station = 800.0;
+        double station = 530.0;
         int button = 5;
         radio.saveStation(button);
         radio.selectStation(button);
